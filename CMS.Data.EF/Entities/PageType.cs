@@ -8,6 +8,6 @@ namespace CMS.Data.EF.Entities
         public string Description { get; set; }
 
         //one-to-manies
-        public virtual IEnumerable<Page> Pages { get; set; }
+        public virtual IList<Page> Pages { get; set; }
     }
 }

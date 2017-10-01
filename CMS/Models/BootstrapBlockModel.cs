@@ -17,7 +17,7 @@ namespace CMS.Models
             //add the children if they exist
             if (Children.Any())
             {
-                foreach (var child in Children.OrderBy(c => c.Position)
+                foreach (var child in Children.OrderBy(c => c.Position))
                 { 
                     htmlResult.AppendLine(child.Render());
                 }

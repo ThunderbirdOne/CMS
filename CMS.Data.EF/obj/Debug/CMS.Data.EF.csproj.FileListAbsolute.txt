@@ -14,3 +14,4 @@ D:\Projects\Development\CMS\CMS.Data.EF\obj\Debug\CMS.Data.EF.Migrations.Changed
 D:\Projects\Development\CMS\CMS.Data.EF\obj\Debug\CMS.Data.EF.Migrations.SplitPropertyandValueAddedlanguagecodetoAlias.resources
 D:\Projects\Development\CMS\CMS.Data.EF\obj\Debug\CMS.Data.EF.Migrations.Addedpropertytocontext.resources
 D:\Projects\Development\CMS\CMS.Data.EF\obj\Debug\CMS.Data.EF.Migrations.Addedlinkbetweenblocksandpages.resources
+D:\Projects\Development\CMS\CMS.Data.EF\obj\Debug\CMS.Data.EF.Migrations.GottaMigrate.resources

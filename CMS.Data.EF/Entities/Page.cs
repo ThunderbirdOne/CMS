@@ -14,10 +14,10 @@ namespace CMS.Data.EF.Entities
 
         public virtual Page ParentPage { get; set; }
 
-        public virtual IEnumerable<Alias> Aliases { get; set; }
+        public virtual IList<Alias> Aliases { get; set; }
 
-        public virtual IEnumerable<Block> Blocks { get; set; }
+        public virtual IList<Block> Blocks { get; set; }
 
-        public virtual IEnumerable<Page> ChildPages { get; set; }
+        public virtual IList<Page> ChildPages { get; set; }
     }
 }

@@ -5,8 +5,13 @@ using System.Collections.Generic;
 
 namespace CMS.Data.EF.Entities
 {
-    public abstract class Block : AuditedEntity
-    { 
+    public class Block : AuditedEntity
+    {
+        public Block()
+        {
+            ChildBlocks = new List<Block>();
+        }
+
         public BlockType Type { get; set; }
 
         public int Position { get; set; }
@@ -20,6 +25,6 @@ namespace CMS.Data.EF.Entities
 
         public Page Page { get; set; }
 
-        public virtual IEnumerable<Block> ChildBlocks { get; set; }
+        public virtual IList<Block> ChildBlocks { get; set; }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using CMS.Utilities.ViewRendering;
+using System.Collections.Generic;
 using System.Text;
 
 namespace CMS.Models
@@ -7,13 +8,14 @@ namespace CMS.Models
     {
         public string PartialViewPath { get; set; }
 
-        public IEnumerable<PropertyModel> Properties { get; set; }
+        public IList<PropertyModel> Properties { get; set; }
 
         public override string Render()
         {
             var htmlResult = new StringBuilder();
 
-            htmlResult.AppendLine("render content here");
+            PageModel model = null;
+            htmlResult.AppendLine(ViewRenderer.RenverViewToString(PartialViewPath, model, true));
 
             return htmlResult.ToString();
         }

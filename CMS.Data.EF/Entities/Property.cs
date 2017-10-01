@@ -14,6 +14,6 @@ namespace CMS.Data.EF.Entities
 
         public virtual ContentBlock Block { get; set; }
 
-        public virtual IEnumerable<PropertyValue> Values { get; set; }
+        public virtual IList<PropertyValue> Values { get; set; }
     }
 }

@@ -8,11 +8,14 @@ public class PageRouteConstraint : IRouteConstraint
 
     public bool Match(HttpContextBase httpContext, Route route, string parameterName, RouteValueDictionary values, RouteDirection routeDirection)
     {
-        var pages = new UnitOfWork().AliasRepository.Get(x => x.Url == values["pageName"].ToString());
+        if (values["pageName"] == null) return false;
+
+        string pageName = "" + values["pageName"];
+        var pages = new UnitOfWork().AliasRepository.Get(x => x.Url == pageName);
 
         if(pages.Count() == 1)
         {
-            values.Add("pageId", pages.First().Id);
+            values.Add("pageId", pages.First().PageId);
             return true;
         }
         else

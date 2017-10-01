@@ -24,7 +24,7 @@ namespace CMS.Utilities.Mapping
             }
         }
 
-        public static IEnumerable<BlockModel> Map(IEnumerable<Block> entities)
+        public static IList<BlockModel> Map(IList<Block> entities)
         {
             var result = new List<BlockModel>();
             foreach(var entity in entities)
