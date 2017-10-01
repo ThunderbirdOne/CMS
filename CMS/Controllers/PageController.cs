@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CMS.Models;
+using CMS.Utilities.Mapping;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +13,15 @@ namespace CMS.Controllers
         // GET: Page
         public ActionResult Render(Guid pageId)
         {
-            return View();
+            var page = new UnitOfWork().PageRepository.Get(x => x.Id == pageId).Single();
+
+            var model = new PageModel()
+            {
+                Name = page.Name,
+                Blocks = Mapper.Map(page.Blocks)
+            };
+
+            return View("TextPage", model);
         }
     }
 }

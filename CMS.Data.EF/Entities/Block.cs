@@ -16,6 +16,10 @@ namespace CMS.Data.EF.Entities
 
         public virtual Block ParentBlock { get; set; }
 
+        public Guid? PageId { get; set; }
+
+        public Page Page { get; set; }
+
         public virtual IEnumerable<Block> ChildBlocks { get; set; }
     }
 }

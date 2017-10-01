@@ -78,6 +78,10 @@
     <Compile Include="Migrations\201710010942563_Added property to context.Designer.cs">
       <DependentUpon>201710010942563_Added property to context.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710011502251_Added link between blocks and pages.cs" />
+    <Compile Include="Migrations\201710011502251_Added link between blocks and pages.Designer.cs">
+      <DependentUpon>201710011502251_Added link between blocks and pages.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UnitOfWork.cs" />
@@ -98,6 +102,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710010942563_Added property to context.resx">
       <DependentUpon>201710010942563_Added property to context.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710011502251_Added link between blocks and pages.resx">
+      <DependentUpon>201710011502251_Added link between blocks and pages.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

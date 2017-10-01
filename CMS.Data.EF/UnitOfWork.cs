@@ -20,6 +20,20 @@ public class UnitOfWork : IDisposable
         }
     }
 
+    private GenericRepository<Block> blockRepository;
+    public GenericRepository<Block> BlockRepository
+    {
+        get
+        {
+
+            if (this.blockRepository == null)
+            {
+                this.blockRepository = new GenericRepository<Block>(context);
+            }
+            return blockRepository;
+        }
+    }
+
     private GenericRepository<BootstrapBlock> bootstrapBlockRepository;
     public GenericRepository<BootstrapBlock> BootstrapBlockRepository
     {

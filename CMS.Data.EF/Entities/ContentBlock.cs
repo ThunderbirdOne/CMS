@@ -8,6 +8,6 @@ namespace CMS.Data.EF.Entities
     {
         public string PartialViewPath { get; set; }
 
-        public virtual IEnumerable<PropertyValue> PropertyValues { get; set; }
+        public virtual IEnumerable<Property> Properties { get; set; }
     }
 }
