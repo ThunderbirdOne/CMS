@@ -1,0 +1,13 @@
+D:\Projects\Development\CMS\CMSTest\bin\Debug\CMSTest.exe.config
+D:\Projects\Development\CMS\CMSTest\bin\Debug\CMSTest.exe
+D:\Projects\Development\CMS\CMSTest\bin\Debug\CMSTest.pdb
+D:\Projects\Development\CMS\CMSTest\bin\Debug\CMS.Data.EF.dll
+D:\Projects\Development\CMS\CMSTest\bin\Debug\EntityFramework.dll
+D:\Projects\Development\CMS\CMSTest\bin\Debug\EntityFramework.SqlServer.dll
+D:\Projects\Development\CMS\CMSTest\bin\Debug\CMS.Data.EF.pdb
+D:\Projects\Development\CMS\CMSTest\bin\Debug\CMS.Data.EF.dll.config
+D:\Projects\Development\CMS\CMSTest\bin\Debug\EntityFramework.xml
+D:\Projects\Development\CMS\CMSTest\bin\Debug\EntityFramework.SqlServer.xml
+D:\Projects\Development\CMS\CMSTest\obj\Debug\CMSTest.exe
+D:\Projects\Development\CMS\CMSTest\obj\Debug\CMSTest.pdb
+D:\Projects\Development\CMS\CMSTest\obj\Debug\CMSTest.csprojResolveAssemblyReference.cache

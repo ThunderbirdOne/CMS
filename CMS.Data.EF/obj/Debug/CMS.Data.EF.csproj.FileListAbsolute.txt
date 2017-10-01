@@ -1,0 +1,15 @@
+D:\Projects\Development\CMS\CMS.Data.EF\bin\Debug\CMS.Data.EF.dll.config
+D:\Projects\Development\CMS\CMS.Data.EF\bin\Debug\CMS.Data.EF.dll
+D:\Projects\Development\CMS\CMS.Data.EF\bin\Debug\CMS.Data.EF.pdb
+D:\Projects\Development\CMS\CMS.Data.EF\bin\Debug\EntityFramework.dll
+D:\Projects\Development\CMS\CMS.Data.EF\bin\Debug\EntityFramework.SqlServer.dll
+D:\Projects\Development\CMS\CMS.Data.EF\bin\Debug\EntityFramework.xml
+D:\Projects\Development\CMS\CMS.Data.EF\bin\Debug\EntityFramework.SqlServer.xml
+D:\Projects\Development\CMS\CMS.Data.EF\obj\Debug\CMS.Data.EF.csprojResolveAssemblyReference.cache
+D:\Projects\Development\CMS\CMS.Data.EF\obj\Debug\CMS.Data.EF.dll
+D:\Projects\Development\CMS\CMS.Data.EF\obj\Debug\CMS.Data.EF.pdb
+D:\Projects\Development\CMS\CMS.Data.EF\obj\Debug\CMS.Data.EF.Migrations.Initial.resources
+D:\Projects\Development\CMS\CMS.Data.EF\obj\Debug\CMS.Data.EF.csproj.GenerateResource.Cache
+D:\Projects\Development\CMS\CMS.Data.EF\obj\Debug\CMS.Data.EF.Migrations.ChangedTypetoDescriptioninPageType.resources
+D:\Projects\Development\CMS\CMS.Data.EF\obj\Debug\CMS.Data.EF.Migrations.SplitPropertyandValueAddedlanguagecodetoAlias.resources
+D:\Projects\Development\CMS\CMS.Data.EF\obj\Debug\CMS.Data.EF.Migrations.Addedpropertytocontext.resources
