@@ -36,3 +36,4 @@ C:\ITR\CMS\CMS.Data.EF\obj\Debug\CMS.Data.EF.pdb
 C:\ITR\CMS\CMS.Data.EF\obj\Debug\CMS.Data.EF.Migrations.AddedisPublishedflagtoPage.resources
 C:\ITR\CMS\CMS.Data.EF\obj\Debug\CMS.Data.EF.Migrations.Addedmediaentity.resources
 C:\ITR\CMS\CMS.Data.EF\obj\Debug\CMS.Data.EF.Migrations.Addedrequiredattributetolotsofproperties.resources
+C:\ITR\CMS\CMS.Data.EF\obj\Debug\CMS.Data.EF.Migrations.Addedpagepresets.resources

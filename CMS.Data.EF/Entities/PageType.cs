@@ -13,5 +13,7 @@ namespace CMS.Data.EF.Entities
 
         //one-to-manies
         public virtual IList<Page> Pages { get; set; }
+        
+        public virtual IList<PageTypePreset> AllowedPresets { get; set; }
     }
 }

@@ -12,6 +12,8 @@ namespace CMS.Data.EF
         public DbSet<ContentBlock> ContentBlocks { get; set; }
         public DbSet<Media> Media { get; set; }
         public DbSet<Page> Pages { get; set; }
+        public DbSet<PagePreset> PagePresets { get; set; }
+        public DbSet<PageTypePreset> PageTypePresets { get; set; }
         public DbSet<PageType> PageTypes { get; set; }
         public DbSet<Property> Properties { get; set; }
         public DbSet<PropertyValue> PropertyValues { get; set; }
@@ -29,6 +31,8 @@ namespace CMS.Data.EF
             modelBuilder.Entity<ContentBlock>().ToTable("ContentBlocks", "CMS");
             modelBuilder.Entity<Media>().ToTable("Media", "CMS");
             modelBuilder.Entity<Page>().ToTable("Pages", "CMS");
+            modelBuilder.Entity<PagePreset>().ToTable("PagePresets", "CMS");
+            modelBuilder.Entity<PageTypePreset>().ToTable("PageTypePresets", "CMS");
             modelBuilder.Entity<PageType>().ToTable("PageTypes", "CMS");
             modelBuilder.Entity<Property>().ToTable("Properties", "CMS");
             modelBuilder.Entity<PropertyValue>().ToTable("PropertyValues", "CMS");

@@ -27,6 +27,10 @@ namespace CMS.Data.EF.Entities
 
         public virtual IList<Block> ChildBlocks { get; set; }
 
+        public Guid? PagePresetId { get; set; }
+
+        public virtual PagePreset PagePreset { get; set; }
+
         public void AddChild(Block child, bool fromParent = false)
         {
             ChildBlocks.Add(child);
@@ -42,6 +46,14 @@ namespace CMS.Data.EF.Entities
 
             if(!fromChild)
                 parent.AddChild(this, true);
+        }
+
+        public bool IsPreset
+        {
+            get
+            {
+                return PagePresetId.HasValue && !PageId.HasValue;
+            }
         }
     }
 }

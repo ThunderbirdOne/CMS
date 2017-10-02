@@ -25,9 +25,9 @@ public class PageRouteConstraint : IRouteConstraint
 
                 if (isGuid)
                 {
-                    //IF its a guid, we still need to check if the page exists and if it's publicly visible (isPublished = 1)
+                    //IF its a guid, we still need to check if the page exists
                     var page = new UnitOfWork().PageRepository.GetByID(pageId);
-                    if (page != null && page.IsPublished)
+                    if (page != null)
                     {
                         Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo(parts[0]);
                         Thread.CurrentThread.CurrentUICulture = Thread.CurrentThread.CurrentCulture;
