@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace CMS.Data.EF.Entities
 {
@@ -6,6 +7,7 @@ namespace CMS.Data.EF.Entities
     {
         public DateTime Created { get; set; }
 
+        [Required]
         public string CreateUser { get; set; }
 
         public DateTime? LastUpdate { get; set; }

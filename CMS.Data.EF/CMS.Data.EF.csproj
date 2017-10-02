@@ -55,6 +55,7 @@
     <Compile Include="Entities\Block.cs" />
     <Compile Include="Entities\BootstrapBlock.cs" />
     <Compile Include="Entities\ContentBlock.cs" />
+    <Compile Include="Entities\Media.cs" />
     <Compile Include="Entities\Page.cs" />
     <Compile Include="Entities\PageType.cs" />
     <Compile Include="Entities\Property.cs" />
@@ -90,6 +91,14 @@
     <Compile Include="Migrations\201710021228432_Added isPublished flag to Page.Designer.cs">
       <DependentUpon>201710021228432_Added isPublished flag to Page.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710021518096_Added media entity.cs" />
+    <Compile Include="Migrations\201710021518096_Added media entity.Designer.cs">
+      <DependentUpon>201710021518096_Added media entity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710021525128_Added required attribute to lots of properties.cs" />
+    <Compile Include="Migrations\201710021525128_Added required attribute to lots of properties.Designer.cs">
+      <DependentUpon>201710021525128_Added required attribute to lots of properties.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UnitOfWork.cs" />
@@ -119,6 +128,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710021228432_Added isPublished flag to Page.resx">
       <DependentUpon>201710021228432_Added isPublished flag to Page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710021518096_Added media entity.resx">
+      <DependentUpon>201710021518096_Added media entity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710021525128_Added required attribute to lots of properties.resx">
+      <DependentUpon>201710021525128_Added required attribute to lots of properties.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

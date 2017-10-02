@@ -199,11 +199,10 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Page\TextPage.cshtml" />
-    <Content Include="Views\Partials\Grid\_Test.cshtml" />
-    <Content Include="Views\Partials\Grid\_Test2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Partials\Grid\" />
     <Folder Include="Views\Test\" />
   </ItemGroup>
   <ItemGroup>

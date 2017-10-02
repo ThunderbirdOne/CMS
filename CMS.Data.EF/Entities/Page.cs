@@ -1,12 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace CMS.Data.EF.Entities
 {
     public class Page : AuditedEntity
     {
+        [Required]
         public string Name { get; set; }
 
+        [Required]
         public PageType Type { get; set; }
 
         //one-to-manies

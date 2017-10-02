@@ -10,38 +10,57 @@ public class PageRouteConstraint : IRouteConstraint
 
     public bool Match(HttpContextBase httpContext, Route route, string parameterName, RouteValueDictionary values, RouteDirection routeDirection)
     {
-        if (values["pageName"] == null) return false;
-
-        string pageName = "" + values["pageName"];
-
-        //Check if pagename is a guid, if so... get page with that guid
-        Guid pageId = Guid.Empty;
-        bool isGuid = Guid.TryParse(pageName, out pageId);
-
-        if (isGuid)
+        try
         {
-            //IF its a guid, we still need to check if the page exists and if it's publicly visible (isPublished = 1)
-            var page = new UnitOfWork().PageRepository.GetByID(pageId);
-            if(page != null && page.IsPublished)
+            if (values["pageName"] == null) return false;
+
+            string pageName = "" + values["pageName"];
+
+            //We also want an easy way to preview pages in languages (i.e. /xx-XX/GUID)
+            string[] parts = pageName.Split(new char[] { '/' });
+            if (parts.Length == 2)
             {
-                values.Add("pageId", page.Id);
-                return true;
+                Guid pageId = Guid.Empty;
+                bool isGuid = Guid.TryParse(parts[1], out pageId);
+
+                if (isGuid)
+                {
+                    //IF its a guid, we still need to check if the page exists and if it's publicly visible (isPublished = 1)
+                    var page = new UnitOfWork().PageRepository.GetByID(pageId);
+                    if (page != null && page.IsPublished)
+                    {
+                        Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo(parts[0]);
+                        Thread.CurrentThread.CurrentUICulture = Thread.CurrentThread.CurrentCulture;
+
+                        values.Add("pageId", page.Id);
+                        return true;
+                    }
+                }
             }
-        }
-        else
-        {
+
+            //Link was not in format of (xx-XX/GUID) - see if we can find an alias
             var aliases = new UnitOfWork().AliasRepository.Get(x => x.Url == pageName && x.Page.IsPublished);
             if (aliases.Count() == 1)
             {
                 var alias = aliases.Single();
-                Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo(alias.LanguageCode);
-                Thread.CurrentThread.CurrentUICulture = Thread.CurrentThread.CurrentCulture;
+
+                if(alias.LanguageCode != null && !string.IsNullOrWhiteSpace(alias.LanguageCode))
+                { 
+                    Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo(alias.LanguageCode);
+                    Thread.CurrentThread.CurrentUICulture = Thread.CurrentThread.CurrentCulture;
+                }
 
                 values.Add("pageId", alias.PageId);
                 return true;
             }
+
+            //NO MATCH found, try other routes
+            return false;
         }
-       
-        return false;        
+        catch (Exception ex)
+        {
+            //Something went wrong somewhere... route fails 
+            return false;
+        }
     }
 }
