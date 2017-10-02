@@ -26,5 +26,22 @@ namespace CMS.Data.EF.Entities
         public Page Page { get; set; }
 
         public virtual IList<Block> ChildBlocks { get; set; }
+
+        public void AddChild(Block child, bool fromParent = false)
+        {
+            ChildBlocks.Add(child);
+
+            if(!fromParent)
+                child.AddParent(this, true);
+        }
+
+        public void AddParent(Block parent, bool fromChild = false)
+        {
+            ParentBlock = parent;
+            ParentBlockId = parent.Id;
+
+            if(!fromChild)
+                parent.AddChild(this, true);
+        }
     }
 }

@@ -19,5 +19,7 @@ namespace CMS.Data.EF.Entities
         public virtual IList<Block> Blocks { get; set; }
 
         public virtual IList<Page> ChildPages { get; set; }
+
+        public bool IsPublished { get; set; }
     }
 }

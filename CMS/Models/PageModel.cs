@@ -8,16 +8,11 @@ namespace CMS.Models
     {
         public string Name { get; set; }
 
-        public IList<BlockModel> Blocks { get; set; }
+        public List<BlockModel> RootBlocks { get; set; }
 
         public PageModel()
         {
-            Blocks = new List<BlockModel>();
-        }
-
-        public PageModel(IList<BlockModel> blocks)
-        {
-            Blocks = blocks;
+            RootBlocks = new List<BlockModel>();
         }
 
         public string RenderHtml
@@ -26,8 +21,7 @@ namespace CMS.Models
             {
                 var htmlResult = new StringBuilder();
 
-                var rootBlocks = Blocks.Where(b => b.Parent == null);
-                foreach(var rootBlock in rootBlocks)
+                foreach(var rootBlock in RootBlocks)
                 {
                     htmlResult.AppendLine(rootBlock.Render());
                 }

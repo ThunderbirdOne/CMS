@@ -11,3 +11,17 @@ D:\Projects\Development\CMS\CMSTest\bin\Debug\EntityFramework.SqlServer.xml
 D:\Projects\Development\CMS\CMSTest\obj\Debug\CMSTest.exe
 D:\Projects\Development\CMS\CMSTest\obj\Debug\CMSTest.pdb
 D:\Projects\Development\CMS\CMSTest\obj\Debug\CMSTest.csprojResolveAssemblyReference.cache
+C:\ITR\CMS\CMSTest\bin\Debug\CMSTest.exe.config
+C:\ITR\CMS\CMSTest\bin\Debug\CMSTest.exe
+C:\ITR\CMS\CMSTest\bin\Debug\CMSTest.pdb
+C:\ITR\CMS\CMSTest\bin\Debug\CMS.Data.EF.dll
+C:\ITR\CMS\CMSTest\bin\Debug\EntityFramework.dll
+C:\ITR\CMS\CMSTest\bin\Debug\EntityFramework.SqlServer.dll
+C:\ITR\CMS\CMSTest\bin\Debug\CMS.Data.EF.pdb
+C:\ITR\CMS\CMSTest\bin\Debug\CMS.Data.EF.dll.config
+C:\ITR\CMS\CMSTest\bin\Debug\EntityFramework.xml
+C:\ITR\CMS\CMSTest\bin\Debug\EntityFramework.SqlServer.xml
+C:\ITR\CMS\CMSTest\obj\Debug\CMSTest.csprojResolveAssemblyReference.cache
+C:\ITR\CMS\CMSTest\obj\Debug\CMSTest.csproj.CoreCompileInputs.cache
+C:\ITR\CMS\CMSTest\obj\Debug\CMSTest.exe
+C:\ITR\CMS\CMSTest\obj\Debug\CMSTest.pdb

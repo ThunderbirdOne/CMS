@@ -8,14 +8,13 @@ namespace CMS.Models
     {
         public string PartialViewPath { get; set; }
 
-        public IList<PropertyModel> Properties { get; set; }
+        public Dictionary<string, string> Properties { get; set; }
 
         public override string Render()
         {
             var htmlResult = new StringBuilder();
 
-            PageModel model = null;
-            htmlResult.AppendLine(ViewRenderer.RenverViewToString(PartialViewPath, model, true));
+            htmlResult.AppendLine(ViewRenderer.RenverViewToString(PartialViewPath, Properties, true));
 
             return htmlResult.ToString();
         }

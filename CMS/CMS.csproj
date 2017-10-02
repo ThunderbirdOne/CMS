@@ -25,6 +25,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -45,6 +46,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=6.1.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.6.1.1\lib\net45\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
@@ -154,7 +158,10 @@
     <Compile Include="Models\PropertyModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utilities\CustomRouting\PageRouteConstraint.cs" />
+    <Compile Include="Utilities\Mapping\AutoMapperConfiguration.cs" />
     <Compile Include="Utilities\Mapping\BlockMapper.cs" />
+    <Compile Include="Utilities\Mapping\CMSProfile.cs" />
+    <Compile Include="Utilities\Mapping\PropertyMapper.cs" />
     <Compile Include="Utilities\ViewRendering\ViewRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -193,6 +200,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Page\TextPage.cshtml" />
     <Content Include="Views\Partials\Grid\_Test.cshtml" />
+    <Content Include="Views\Partials\Grid\_Test2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
