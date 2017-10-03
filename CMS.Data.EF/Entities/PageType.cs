@@ -11,6 +11,8 @@ namespace CMS.Data.EF.Entities
 
         public string Description { get; set; }
 
+        public bool AllowAtRoot { get; set; }
+
         //one-to-manies
         public virtual IList<Page> Pages { get; set; }
         

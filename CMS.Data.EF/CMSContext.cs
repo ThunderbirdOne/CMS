@@ -8,6 +8,7 @@ namespace CMS.Data.EF
     {
         public DbSet<Alias> Aliases {get; set;}
         public DbSet<Block> Blocks {get; set;}
+        public DbSet<BlockType> BlockTypes { get; set; }
         public DbSet<BootstrapBlock> BootstrapBlocks {get; set; }
         public DbSet<ContentBlock> ContentBlocks { get; set; }
         public DbSet<Media> Media { get; set; }
@@ -27,6 +28,7 @@ namespace CMS.Data.EF
 
             modelBuilder.Entity<Alias>().ToTable("Aliases", "CMS");
             modelBuilder.Entity<Block>().ToTable("Blocks", "CMS");
+            modelBuilder.Entity<BlockType>().ToTable("BlockTypes", "CMS");
             modelBuilder.Entity<BootstrapBlock>().ToTable("BootstrapBlocks", "CMS");
             modelBuilder.Entity<ContentBlock>().ToTable("ContentBlocks", "CMS");
             modelBuilder.Entity<Media>().ToTable("Media", "CMS");

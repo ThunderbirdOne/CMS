@@ -1,5 +1,5 @@
 ﻿using CMS.Data.EF.Entities;
-using CMS.Models;
+using CMS.Models.CMS;
 
 using System.Collections.Generic;
 using System.Globalization;
@@ -15,7 +15,8 @@ namespace CMS.Utilities.Mapping
             CultureInfo currentCulture = Thread.CurrentThread.CurrentCulture;
 
             var propertyValue = entity.Values.SingleOrDefault(x => x.LanguageCode == currentCulture.Name)?.Value;
-            if(propertyValue == null)
+            //Fallback for properties defined for languages (i.e. "en", "fr", ...)
+            if (propertyValue == null)
             {
                 propertyValue = entity.Values.SingleOrDefault(x => x.LanguageCode.StartsWith(currentCulture.TwoLetterISOLanguageName))?.Value;
             }

@@ -48,7 +48,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CMSContext.cs" />
-    <Compile Include="Constants\BlockType.cs" />
+    <Compile Include="Constants\BlockTypes.cs" />
+    <Compile Include="Entities\AllowedBlockType.cs" />
+    <Compile Include="Entities\BlockType.cs" />
     <Compile Include="Entities\Alias.cs" />
     <Compile Include="Entities\AuditedEntity.cs" />
     <Compile Include="Entities\BaseEntity.cs" />
@@ -65,45 +67,13 @@
     <Compile Include="GenericRepository.cs" />
     <Compile Include="IGenericRepository.cs" />
     <Compile Include="IUnitOfWork.cs" />
-    <Compile Include="Migrations\201710010413011_Initial.cs" />
-    <Compile Include="Migrations\201710010413011_Initial.Designer.cs">
-      <DependentUpon>201710010413011_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\201710030923301_Initial.cs" />
+    <Compile Include="Migrations\201710030923301_Initial.Designer.cs">
+      <DependentUpon>201710030923301_Initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201710010601100_Changed Type to Description in PageType.cs" />
-    <Compile Include="Migrations\201710010601100_Changed Type to Description in PageType.Designer.cs">
-      <DependentUpon>201710010601100_Changed Type to Description in PageType.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201710010942073_Split Property and Value + Added languagecode to Alias.cs" />
-    <Compile Include="Migrations\201710010942073_Split Property and Value + Added languagecode to Alias.Designer.cs">
-      <DependentUpon>201710010942073_Split Property and Value + Added languagecode to Alias.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201710010942563_Added property to context.cs" />
-    <Compile Include="Migrations\201710010942563_Added property to context.Designer.cs">
-      <DependentUpon>201710010942563_Added property to context.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201710011502251_Added link between blocks and pages.cs" />
-    <Compile Include="Migrations\201710011502251_Added link between blocks and pages.Designer.cs">
-      <DependentUpon>201710011502251_Added link between blocks and pages.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201710012057019_Gotta Migrate.cs" />
-    <Compile Include="Migrations\201710012057019_Gotta Migrate.Designer.cs">
-      <DependentUpon>201710012057019_Gotta Migrate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201710021228432_Added isPublished flag to Page.cs" />
-    <Compile Include="Migrations\201710021228432_Added isPublished flag to Page.Designer.cs">
-      <DependentUpon>201710021228432_Added isPublished flag to Page.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201710021518096_Added media entity.cs" />
-    <Compile Include="Migrations\201710021518096_Added media entity.Designer.cs">
-      <DependentUpon>201710021518096_Added media entity.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201710021525128_Added required attribute to lots of properties.cs" />
-    <Compile Include="Migrations\201710021525128_Added required attribute to lots of properties.Designer.cs">
-      <DependentUpon>201710021525128_Added required attribute to lots of properties.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201710021556540_Added page presets.cs" />
-    <Compile Include="Migrations\201710021556540_Added page presets.Designer.cs">
-      <DependentUpon>201710021556540_Added page presets.cs</DependentUpon>
+    <Compile Include="Migrations\201710031426283_Add AllowAtRoot for pageType.cs" />
+    <Compile Include="Migrations\201710031426283_Add AllowAtRoot for pageType.Designer.cs">
+      <DependentUpon>201710031426283_Add AllowAtRoot for pageType.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -114,35 +84,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201710010413011_Initial.resx">
-      <DependentUpon>201710010413011_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201710030923301_Initial.resx">
+      <DependentUpon>201710030923301_Initial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201710010601100_Changed Type to Description in PageType.resx">
-      <DependentUpon>201710010601100_Changed Type to Description in PageType.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201710010942073_Split Property and Value + Added languagecode to Alias.resx">
-      <DependentUpon>201710010942073_Split Property and Value + Added languagecode to Alias.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201710010942563_Added property to context.resx">
-      <DependentUpon>201710010942563_Added property to context.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201710011502251_Added link between blocks and pages.resx">
-      <DependentUpon>201710011502251_Added link between blocks and pages.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201710012057019_Gotta Migrate.resx">
-      <DependentUpon>201710012057019_Gotta Migrate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201710021228432_Added isPublished flag to Page.resx">
-      <DependentUpon>201710021228432_Added isPublished flag to Page.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201710021518096_Added media entity.resx">
-      <DependentUpon>201710021518096_Added media entity.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201710021525128_Added required attribute to lots of properties.resx">
-      <DependentUpon>201710021525128_Added required attribute to lots of properties.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201710021556540_Added page presets.resx">
-      <DependentUpon>201710021556540_Added page presets.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201710031426283_Add AllowAtRoot for pageType.resx">
+      <DependentUpon>201710031426283_Add AllowAtRoot for pageType.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

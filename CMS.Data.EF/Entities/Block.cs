@@ -1,7 +1,6 @@
-﻿using CMS.Data.EF.Constants;
-
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace CMS.Data.EF.Entities
 {
@@ -11,8 +10,6 @@ namespace CMS.Data.EF.Entities
         {
             ChildBlocks = new List<Block>();
         }
-
-        public BlockType Type { get; set; }
 
         public int Position { get; set; }
 
@@ -30,6 +27,11 @@ namespace CMS.Data.EF.Entities
         public Guid? PagePresetId { get; set; }
 
         public virtual PagePreset PagePreset { get; set; }
+
+        [Required]
+        public Guid BlockTypeId { get; set; }
+
+        public virtual BlockType Type { get; set; }
 
         public void AddChild(Block child, bool fromParent = false)
         {

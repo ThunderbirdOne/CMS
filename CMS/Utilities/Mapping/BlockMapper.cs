@@ -1,6 +1,6 @@
 ﻿using CMS.Data.EF.Constants;
 using CMS.Data.EF.Entities;
-using CMS.Models;
+using CMS.Models.CMS;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -12,18 +12,19 @@ namespace CMS.Utilities.Mapping
         {
             if (entity == null) return null;
 
-            switch(entity.Type)
+            switch(entity.Type.Name)
             {
-                case BlockType.BootstrapGrid:
+                case BlockTypes.BootstrapGrid:
                     return new BootstrapGridModel() { Id = entity.Id, Parent = Map(entity.ParentBlock), Position = entity.Position };
-                case BlockType.BootstrapRow:
+                case BlockTypes.BootstrapRow:
                     return new BootstrapRowModel() { Id = entity.Id, Position = entity.Position };
-                case BlockType.BootstrapBlock:
+                case BlockTypes.BootstrapBlock:
                     BootstrapBlock block = (BootstrapBlock)entity;
                     return new BootstrapBlockModel() { Id = block.Id, Position = block.Position, Width = block.Width };
-                case BlockType.Content:
+                case BlockTypes.Content:
                     ContentBlock content = (ContentBlock)entity;
-                    return new ContentBlockModel() { Id = content.Id, Position = content.Position, PartialViewPath = content.PartialViewPath, Properties = PropertyMapper.Map(content.Properties).ToDictionary(x => x.Name, x => x.Value) };
+                    var propertiesDict = PropertyMapper.Map(content.Properties).ToDictionary(x => x.Name, x => x.Value);
+                    return new ContentBlockModel() { Id = content.Id, Position = content.Position, PartialViewPath = content.PartialViewPath, Model = new GenericContentModel(propertiesDict) };
                 default:
                     return null;
             }
